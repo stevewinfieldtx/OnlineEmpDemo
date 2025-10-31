@@ -1,0 +1,243 @@
+﻿/* --- Global & WinTech Branding --- */
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #1C1C3C; /* Deep Midnight */
+}
+.btn-primary {
+  background-color: #388BEB; /* Win Blue */
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.btn-primary:hover {
+  background-color: #935CFF; /* Tech Purple */
+}
+
+/* --- Demo Page --- */
+.demo-header {
+  background: #1C1C3C; /* Deep Midnight */
+  color: #FFFFFF;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.demo-header h1 {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+}
+.demo-header p {
+  font-size: 1.2rem;
+  color: #CFCFD4; /* Silver Gray */
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+.logo-container {
+  margin-bottom: 2rem;
+}
+.logo-container img {
+  max-width: 250px;
+}
+.demo-main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.metrics {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.metric-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex-basis: 250px;
+  border-top: 4px solid #388BEB; /* Win Blue */
+}
+.metric-card h3 {
+  font-size: 3rem;
+  color: #935CFF; /* Tech Purple */
+  margin: 0 0 0.5rem 0;
+}
+.metric-card p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* --- Admin Page --- */
+.admin-body {
+  background-color: #f4f7f6; /* Lighter bg for admin */
+}
+.admin-header {
+  background-color: #1C1C3C; /* Deep Midnight */
+  text-align: center;
+  padding: 1.5rem;
+}
+.admin-logo {
+  max-width: 180px;
+}
+.admin-header h1 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.admin-main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 2rem;
+}
+.admin-card {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.admin-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.admin-form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.admin-form input[type="text"],
+.admin-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #CFCFD4;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.prospect-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.prospect-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.prospect-item input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  background: #eee;
+  font-family: 'Consolas', monospace;
+  box-sizing: border-box;
+  color: #333;
+}
+
+/* --- Chat Widget (Shared) --- */
+#chat-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #388BEB; /* Win Blue */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9998;
+}
+#chat-bubble svg { width: 32px; height: 32px; }
+#chat-window {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  max-width: 90vw;
+  height: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+#chat-window.open { display: flex; }
+.chat-header {
+  background: #1C1C3C; /* Deep Midnight */
+  color: #FFFFFF;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-header h3 { color: #FFFFFF; margin: 0; font-size: 1.1rem; }
+#close-chat {
+  background: none; border: none; color: #CFCFD4; font-size: 1.5rem; cursor: pointer;
+}
+.chat-messages {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.message {
+  padding: 0.75rem 1rem;
+  border-radius: 18px;
+  max-width: 80%;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+.ai-message {
+  background: #f1f0f0; color: #333; align-self: flex-start;
+}
+.user-message {
+  background: #388BEB; color: white; align-self: flex-end;
+}
+.chat-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 0.5rem;
+  background: #fff;
+}
+#chat-input {
+  flex-grow: 1; border: none; padding: 0.75rem; border-radius: 20px;
+  background: #f1f0f0; outline: none;
+}
+#send-button {
+  background: #388BEB; color: white; border: none; padding: 0 1rem;
+  margin-left: 0.5rem; border-radius: 20px; cursor: pointer;
+}
+.audio-controls { margin-top: 8px; }
+.play-audio-btn {
+  background: #eee; border: 1px solid #ddd; border-radius: 50%;
+  width: 30px; height: 30px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.play-audio-btn svg { width: 16px; height: 16px; margin: auto; }
